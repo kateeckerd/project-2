@@ -14,14 +14,72 @@
       padding: 0;
       font-family: sans-serif;
       background-color: #ededed;
+      --polaris-chip-psu-white: #ffffff;
+      --polaris-chip-psu-gray:#E4E5E7;
+      --polaris-chip-psu-darkblue: #001E44;
+      --polaris-chip-psu-black: #000000;
+    }
+
+    div {
+      height: 48px;
+      width: 432px;
+      padding: 16px;
+      margin: 16px;
+      display: flex;
+    }
+    
+    p {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .white-bg {
+      background-color: var(--polaris-chip-psu-white);
+    }
+
+
+    .gray-bg {
+      background-color: var(--polaris-chip-psu-gray);
+    }
+
+    .blue-bg {
+      background-color: var(--polaris-chip-psu-darkblue);
+    }
+
+    .white-text  {
+      color: var(--polaris-chip-psu-white);
+    }
+
+    .black-text  {
+      color: var(--polaris-chip-psu-black);
     }
   </style>
+
   <title>polaris-chip</title>
 </head>
 
 <body>
-  <polaris-chip></polaris-chip>
-  <polaris-chip title="Cool stuff"></polaris-chip>
+  <div class="white-bg">
+    <p class="black-text">Get the news by email</p>
+    <polaris-chip type="primary" outlined>Subscribe</polaris-chip>
+  </div>
+  <div class="white-bg">
+    <p class="black-text">Get the news by email</p>
+    <polaris-chip type="primary" filled>Subscribe</polaris-chip>
+  </div>
+  <div class="gray-bg">
+    <p class="black-text">Get the news by email</p>
+    <polaris-chip type="tinted">Subscribe</polaris-chip>
+  </div>
+  <div class="blue-bg">
+    <p class="white-text">Get the news by email</p>
+    <polaris-chip type="light" outlined>Subscribe</polaris-chip>
+  </div>
+  <div class="blue-bg">
+    <p class="white-text">Get the news by email</p>
+    <polaris-chip type="light" filled>Subscribe</polaris-chip>
+  </div>
 
   <script type="module" src="./src/polaris-chip.js"></script>
 </body>
